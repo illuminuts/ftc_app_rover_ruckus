@@ -7,9 +7,9 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 // Starting Point /  Template for all AUTONOMOUS Modes
 //
 
-@Autonomous(name = "AutonomousDirectClaim")
+//@Autonomous(name = "AutonomousV1")
 
-public class autonomusDirectClaim extends LinearOpMode {
+public class TemplateAuto extends LinearOpMode {
 
     private illuminutsRobot robot = new illuminutsRobot();
 
@@ -18,29 +18,28 @@ public class autonomusDirectClaim extends LinearOpMode {
 
         robot.init(hardwareMap, telemetry);
 
+        // Keep hold of the minion
         robot.iconHold();
 
+        // Open the grabber
         robot.winchUp();
         sleep(1000);
         robot.winchStop();
 
-        while (!isStarted()) {
+        // grab and hold until PLAY is presses
+        while(!isStarted()) {
             robot.winchHold();
         }
 
-        robot.message("started");
-
+        // Land
         robot.winchDrop();
 
         // Clear Lander
-        robot.motorStraight(0.3, 500);
+        robot.motorStraight(0.3,500);
 
         // Retract the grabber
         robot.winchRetract();
-
-        //drive to depot
-        robot.motorStraight(0.4, 2000);
-
-        robot.iconDrop();
     }
 }
+
+

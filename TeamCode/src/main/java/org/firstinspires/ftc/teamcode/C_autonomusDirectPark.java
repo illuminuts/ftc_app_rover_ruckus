@@ -7,9 +7,9 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 // Starting Point /  Template for all AUTONOMOUS Modes
 //
 
-@Autonomous(name = "B: IndirectClaimPark")
+@Autonomous(name = "C: DirectPark")
 
-public class autonomusIndirectClaimPark extends LinearOpMode {
+public class C_autonomusDirectPark extends LinearOpMode {
 
     private illuminutsRobot robot = new illuminutsRobot();
 
@@ -38,18 +38,7 @@ public class autonomusIndirectClaimPark extends LinearOpMode {
         // Retract the grabber
         robot.winchRetract();
 
-        //turn to face depot
-        robot.motorTurn(0.4, 300);
-
-        //drive to depot
-        robot.motorStraight(0.4, 2000);
-
-        robot.iconDrop();
-
-        //turn to face crater
-        robot.motorTurn(-0.4, 300);
-
         //drive to crater
-        robot.motorStraight(0.4, 4500);
+        robot.motorStraight(0.4, 2000);
     }
 }

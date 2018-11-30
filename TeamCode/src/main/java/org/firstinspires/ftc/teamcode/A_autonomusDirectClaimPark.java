@@ -3,13 +3,9 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
-//
-// Starting Point /  Template for all AUTONOMOUS Modes
-//
+@Autonomous (name = "A: DirectClaimPark")
 
-@Autonomous(name = "D: IndirectClaim")
-
-public class autonomusIndirectClaim extends LinearOpMode {
+public class A_autonomusDirectClaimPark extends LinearOpMode {
 
     private illuminutsRobot robot = new illuminutsRobot();
 
@@ -24,7 +20,7 @@ public class autonomusIndirectClaim extends LinearOpMode {
         sleep(1000);
         robot.winchStop();
 
-        while (!isStarted()) {
+        while(!isStarted()) {
             robot.winchHold();
         }
 
@@ -33,17 +29,20 @@ public class autonomusIndirectClaim extends LinearOpMode {
         robot.winchDrop();
 
         // Clear Lander
-        robot.motorStraight(0.3, 500);
+        robot.motorStraight(0.3,500);
 
         // Retract the grabber
         robot.winchRetract();
-
-        //turn to face depot
-        robot.motorTurn(0.4, 200);
 
         //drive to depot
         robot.motorStraight(0.4, 2000);
 
         robot.iconDrop();
+
+        //turn to face crater
+        robot.motorTurn(-0.4, 300);
+
+        //drive to crater
+        robot.motorStraight(-0.4,4500);
     }
 }
