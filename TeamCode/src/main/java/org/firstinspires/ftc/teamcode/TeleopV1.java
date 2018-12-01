@@ -17,6 +17,12 @@ public class TeleopV1 extends LinearOpMode {
 
         robot.message("waitForStart()");
 
+        robot.LEDwhite();
+        sleep(500);
+        robot.LEDoff();
+        sleep(500);
+        robot.LEDwhite();
+
         robot.LEDred();
         robot.sleep(1000);
         robot.LEDblue();
@@ -31,12 +37,6 @@ public class TeleopV1 extends LinearOpMode {
 
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
-
-            robot.LEDwhite();
-            sleep(500);
-            robot.LEDoff();
-            sleep(500);
-            robot.LEDwhite();
 
             // Drive Control
             turnPower = gamepad1.left_stick_x;

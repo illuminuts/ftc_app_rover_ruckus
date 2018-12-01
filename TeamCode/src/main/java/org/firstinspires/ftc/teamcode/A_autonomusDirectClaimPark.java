@@ -35,12 +35,12 @@ public class A_autonomusDirectClaimPark extends LinearOpMode {
         robot.winchRetract();
 
         //drive to depot
-        robot.motorStraight(0.4, 2500);
+        robot.motorStraight(0.4, 2600);
 
         robot.iconDrop();
 
         //turn to face crater
-        robot.motorTurn(-0.4, 300);
+        robot.motorTurn(0.4, 300);
 
         //drive to crater
         robot.motorStraight(-0.4,4500);

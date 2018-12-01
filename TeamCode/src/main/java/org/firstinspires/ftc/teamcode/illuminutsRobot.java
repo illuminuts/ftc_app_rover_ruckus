@@ -162,29 +162,28 @@ public class illuminutsRobot {
         LEDred.setState(false);
         LEDgreen.setState(false);
         LEDblue.setState(false);
+        message("off");
     }
     public void LEDred () {
-        LEDred.setState(true);
-        LEDgreen.setState(false);
-        LEDblue.setState(false);
+        LEDred.setState(false);
+        message("red");
     }
 
     public void LEDgreen () {
-        LEDred.setState(false);
         LEDgreen.setState(true);
-        LEDblue.setState(false);
+        message("green");
     }
 
     public void LEDblue () {
-        LEDred.setState(false);
-        LEDgreen.setState(false);
         LEDblue.setState(true);
+        message("blue");
     }
 
     public void LEDwhite() {
         LEDred.setState(true);
         LEDgreen.setState(true);
         LEDblue.setState(true);
+        message("white");
     }
 
     //
