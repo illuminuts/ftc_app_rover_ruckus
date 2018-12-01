@@ -39,7 +39,7 @@ public class E_autonomusDirectClaim extends LinearOpMode {
         robot.winchRetract();
 
         //drive to depot
-        robot.motorStraight(0.4, 2000);
+        robot.motorStraight(0.4, 2500);
 
         robot.iconDrop();
     }

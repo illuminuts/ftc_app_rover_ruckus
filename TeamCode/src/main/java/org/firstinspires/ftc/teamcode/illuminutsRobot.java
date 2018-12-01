@@ -181,6 +181,12 @@ public class illuminutsRobot {
         LEDblue.setState(true);
     }
 
+    public void LEDwhite() {
+        LEDred.setState(true);
+        LEDgreen.setState(true);
+        LEDblue.setState(true);
+    }
+
     //
     // Token Release control
     //
